@@ -1,0 +1,8 @@
+#! /bin/bash
+# Launches Starsector
+
+# Moves to enclosing directory
+cd ~/games/starsector
+
+# Launches the program
+exec ~/games/starsector/starsector.sh

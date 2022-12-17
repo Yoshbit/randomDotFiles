@@ -1,0 +1,9 @@
+#!/bin/bash
+# Launches cyberghost vpn - American servers
+
+
+# Moves to the enclosing directory
+cd ~/openVPN/cyberghost/
+
+# Launches the vpn service (To function this requires a pre configured password file)
+exec sudo openvpn cyberghost.ovpn

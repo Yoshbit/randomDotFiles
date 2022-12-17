@@ -1,0 +1,16 @@
+#!/bin/bash
+# Startup Script for use by LightDM
+
+# This script runs before DWM starts, the second a login to DWM is detected
+
+# Sets the graphical settings such that it fixes the nvida display resolution bug
+
+# Sets the wallpaper and terminal theme to one prior to reboot
+wal -R
+
+# Launches compositor
+compton &
+
+
+# For additional programs run with #program &
+

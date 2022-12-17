@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Creates the text file
+cd ~/.local/share/Steam/steamapps/common/Sid\ Meier\'s\ Civilization\ VI
+touch steam_appid.txt
+echo "289070" > steam_appid.txt
+
+
+# Create shellscript in /bin
+cd /bin
+sudo touch civVI
+
+
+# Writes contents of shellscript
+sudo tee civVI > /dev/null <<EOT
+#!/bin/bash
+# Launches Civilization VI
+
+# Moves to the enclosing directory
+cd  ~/.local/share/Steam/steamapps/common/Sid\ Meier\'s\ Civilization\ VI/
+
+# Launches the program
+exec ~/.local/share/Steam/steamapps/common/Sid\ Meier\'s\ Civilization\ VI/Civ6Sub
+EOT
+
+# Makes script executable
+sudo chmod 755 civVI
+
+echo "script successfully executed. You should now be able to to launch Civilization 6 from the terminal or a tool such as dmenu."

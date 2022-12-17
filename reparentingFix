@@ -1,0 +1,12 @@
+#!/bin/bash
+# Script to fix Java re-parenting issue
+
+# Script is started x seconds after DWM launches
+sleep 3
+
+# Renames WM to not conflict with Java settings
+wmname LG3D &
+
+# Sets nonreparenting flag
+export _JAVA_AWT_WM_NONREPARENTING=1
+
